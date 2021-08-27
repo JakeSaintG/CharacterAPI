@@ -21,13 +21,23 @@ dotnet run
 -- Will pull information on Paul McCartney and Paul Revere
 - "http://localhost:5000/people/mccartney"
 -- Will pull information on just Paul McCartney
+- "http://localhost:5000/people"
+-- Will pull information for all people that are GETable.
+
+## Examples POST
+- In an application like Postman, send a POST request with the following body:
+```sh
+{"name":"janis joplin","birthDate":"1943-01-19T00:00:00","address":{"street":"635 ashbury street","city":"san francisco","state":"California","zip":94117},"interests":["painting","reading","poetry"]}
+```
+- You should then be able to GET the information with "http://localhost:5000/people/janis"
 
 ## Special Thanks
 - Health Catalyst for the chance to learn so much from this challening coding assessment!
 - Peter McClanahan for answering my many questions!
 
 ## Known Issues
-- POST Requests
+- Sending an IMG as a byte[] makes the JSON payload long and ugly.
+-- This may become an issue when attempting to upload an image via byte[] in companion Angular application.
 
 ## Areas of Improvement
 - Utilizing SQL for a database of People
