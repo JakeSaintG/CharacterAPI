@@ -36,8 +36,7 @@ dotnet run
 - Peter McClanahan for answering my many questions!
 
 ## Known Issues
-- Sending an IMG as a byte[] makes the JSON payload long and ugly.
--- This may become an issue when attempting to upload an image via byte[] in companion Angular application.
+- Unable to POST an image currently.
 
 ## Areas of Improvement
 - Utilizing SQL for a database of People

@@ -33,36 +33,37 @@ namespace PeopleAPI.Services
         public static List<Person> GetAll() 
         {
             foreach (var item in People)
-            {       
-                byte[] b = {};
+            {
+                string imageUrl = "";
                 if (File.Exists(@$"img/{item.Id}.webp"))
                 {
-                    b = File.ReadAllBytes(@$"img/{item.Id}.webp");
+                    imageUrl = $"http://localhost:5000/PeopleImage/{item.Id}.webp";
                 }               
-                item.Image = b;   
+                item.Image = imageUrl;   
             }
             return People;
         }
 
-        public static Person[] Get(string name)
+        public static List<Person> Get(string name)
         {
             var searchResults = new List<Person>{};
             foreach (var item in People)
-            {              
+            {
+                item.BirthDate.ToShortDateString();
                 if (item.Name.Contains(name) && File.Exists(@$"img/{item.Id}.webp"))
                 {
-                    byte[] b = File.ReadAllBytes(@$"img/{item.Id}.webp");
-                    item.Image = b;
+                    string imageUrl = $"http://localhost:5000/PeopleImage/{item.Id}.webp";
+                    item.Image = imageUrl;
                     searchResults.Add(item);
                 } 
                 else if (item.Name.Contains(name))
                 {
-                    byte[] b = {};
-                    item.Image = b;
+                    string imageUrl = $"http://localhost:5000/PeopleImage/{item.Id}.webp";
+                    item.Image = imageUrl;
                     searchResults.Add(item);
-                }
+                } 
             } 
-            return searchResults.ToArray();
+            return searchResults;
         }
         public static void Add(Person person)
         {

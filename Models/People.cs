@@ -26,7 +26,7 @@ namespace PeopleAPI.Models
         [JsonProperty(PropertyName = "interests")]
         public string[] Interests { get; set; }
         [JsonProperty(PropertyName = "image")]
-        public byte[] Image { get; set; }
+        public string Image { get; set; }
     }
 
     public class Address

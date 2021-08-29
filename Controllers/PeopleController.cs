@@ -19,18 +19,17 @@ namespace PeopleAPI.Controllers
         PeopleService.GetAll();
 
         [HttpGet("{name}")]
-        public ActionResult<Person[]> Get(string name)
+        public ActionResult<List<Person>> Get(string name)
         {
             var person = PeopleService.Get(name.ToLower());
-            if(person.Length == 0)
+            if(!person.Any())
             {
                 return NotFound();
             } 
             else 
             {
                 return person;
-            }         
-            
+            }                   
         }
 
         [HttpPost]
