@@ -38,7 +38,19 @@ namespace PeopleAPI.Services
                 if (File.Exists(@$"img/{item.Id}.webp"))
                 {
                     imageUrl = $"http://localhost:5000/PeopleImage/{item.Id}.webp";
-                }               
+                }
+                else if (File.Exists(@$"img/{item.Id}.jpg"))
+                {
+                    imageUrl = $"http://localhost:5000/PeopleImage/{item.Id}.jpg";
+                }
+                else if (File.Exists(@$"img/{item.Id}.png"))
+                {
+                    imageUrl = $"http://localhost:5000/PeopleImage/{item.Id}.png";
+                }
+                else
+                {
+                    imageUrl = $"http://localhost:5000/PeopleImage/imageNotFound.jpg";
+                }
                 item.Image = imageUrl;   
             }
             return People;
@@ -50,24 +62,40 @@ namespace PeopleAPI.Services
             foreach (var item in People)
             {
                 item.BirthDate.ToShortDateString();
-                if (item.Name.Contains(name) && File.Exists(@$"img/{item.Id}.webp"))
+                string imageUrl = "";
+                if (File.Exists(@$"img/{item.Id}.webp"))
                 {
-                    string imageUrl = $"http://localhost:5000/PeopleImage/{item.Id}.webp";
+                    imageUrl = $"http://localhost:5000/PeopleImage/{item.Id}.webp";
+                }
+                else if (File.Exists(@$"img/{item.Id}.png"))
+                {
+                    imageUrl = $"http://localhost:5000/PeopleImage/{item.Id}.png";
+                }
+                else if (File.Exists(@$"img/{item.Id}.jpg"))
+                {
+                    imageUrl = $"http://localhost:5000/PeopleImage/{item.Id}.jpg";
+                }
+                //else if (item.Name.Contains(name))
+                //{
+                //    imageUrl = $"http://localhost:5000/PeopleImage/{item.Id}.webp";
+                //}
+                else
+                {
+                    imageUrl = $"http://localhost:5000/PeopleImage/imageNotFound.jpg";
+                }
+
+                if (item.Name.Contains(name))
+                {
                     item.Image = imageUrl;
                     searchResults.Add(item);
-                } 
-                else if (item.Name.Contains(name))
-                {
-                    string imageUrl = $"http://localhost:5000/PeopleImage/{item.Id}.webp";
-                    item.Image = imageUrl;
-                    searchResults.Add(item);
-                } 
+                }
+                
             } 
             return searchResults;
         }
         public static void Add(Person person)
         {
-            person.Id = nextId++;
+            //person.Id = nextId++;
             People.Add(person);
         }
 

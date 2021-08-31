@@ -5,6 +5,8 @@ using PeopleAPI.Models;
 using PeopleAPI.Services;
 using System.Web;
 using System.IO;
+using System;
+using Microsoft.AspNetCore.Hosting;
 
 namespace PeopleAPI.Controllers
 {
@@ -12,6 +14,13 @@ namespace PeopleAPI.Controllers
     [Route("[controller]")]
     public class PeopleImageController : ControllerBase
     {
+        public static IWebHostEnvironment _webHostEnvironment;
+
+        public PeopleImageController(IWebHostEnvironment webHostEnvironment)
+        {
+            _webHostEnvironment = webHostEnvironment;
+        }
+        
         [HttpGet("{image}")]
         public ActionResult GetImage(string image)
         {
@@ -29,11 +38,30 @@ namespace PeopleAPI.Controllers
             return PhysicalFile(imageFile, "image/webp");
         }
 
-        //[HttpPost]
-        //public IActionResult Create(Person person)
-        //{
-        //    PeopleService.Add(person);
-        //    return CreatedAtAction(nameof(Create), new { id = person.Id }, person);
-        //}
+        [HttpPost]
+        public string Post([FromForm] ImageUpload objectImage)
+        {
+            string path = @$"img/";
+            try
+            {
+                if ( objectImage.files.Length > 0)
+                {                  
+                    using (FileStream filestream = System.IO.File.Create(path + objectImage.files.FileName))
+                    {
+                        objectImage.files.CopyTo(filestream);
+                        filestream.Flush();
+                        return $"Image Uploaded";
+                    }
+                }
+                else
+                {
+                    return "Image Upload Failed";
+                }
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
     }
 }
