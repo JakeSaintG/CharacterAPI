@@ -33,7 +33,7 @@ dotnet run
 
 ## Special Thanks
 - Health Catalyst for the chance to learn so much from this challening coding assessment!
-- Peter McClanahan for answering my many questions!
+- Peter McClanahan and Robyn Cute for answering my questions!
 
 ## Known Issues
 - Unable to POST an image currently.

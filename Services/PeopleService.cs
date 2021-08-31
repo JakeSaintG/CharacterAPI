@@ -75,10 +75,6 @@ namespace PeopleAPI.Services
                 {
                     imageUrl = $"http://localhost:5000/PeopleImage/{item.Id}.jpg";
                 }
-                //else if (item.Name.Contains(name))
-                //{
-                //    imageUrl = $"http://localhost:5000/PeopleImage/{item.Id}.webp";
-                //}
                 else
                 {
                     imageUrl = $"http://localhost:5000/PeopleImage/imageNotFound.jpg";
