@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 ## Dependencies
-- ASP.NET Core Runtime 5.0.0
+- ASP.NET Runtime 5.0.0
 
 ## To Run
 - Navigate to your terminal of choice (PowerShell, Git Bash, and Visual Studio were all tested)

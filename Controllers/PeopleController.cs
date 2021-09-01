@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using PeopleAPI.Models;
 using PeopleAPI.Services;
 
+
 namespace PeopleAPI.Controllers
 {
     [ApiController]
@@ -13,11 +14,13 @@ namespace PeopleAPI.Controllers
         public PeopleController()
         {
         }
-
+        
+        //Gets all people stored and sends it.
         [HttpGet]
         public ActionResult<List<Person>> GetAll() =>
         PeopleService.GetAll();
 
+        //Gets a person by name and returns their information.
         [HttpGet("{name}")]
         public ActionResult<List<Person>> Get(string name)
         {
@@ -32,6 +35,7 @@ namespace PeopleAPI.Controllers
             }                   
         }
 
+        //Creates a person object, adds them to memory, and returns Created action.
         [HttpPost]
         public IActionResult Create(Person person)
         {            
@@ -39,6 +43,7 @@ namespace PeopleAPI.Controllers
             return CreatedAtAction(nameof(Create), new { id = person.Id }, person);
         }
 
+        //Not yet implemented but it is intended to allow a user to delete a person from the front end.
         [HttpDelete("{id}")]
         public IActionResult Delete(string name)
         {

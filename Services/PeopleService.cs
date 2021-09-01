@@ -1,7 +1,6 @@
 using System;
 using PeopleAPI.Models;
 using System.Collections.Generic;
-using System.Linq;
 using System.IO;
 
 namespace PeopleAPI.Services
@@ -9,7 +8,7 @@ namespace PeopleAPI.Services
     public static class PeopleService
     {
         static List<Person> People { get; }
-        static int nextId = 11;
+
         static PeopleService()
         {
             People = new List<Person>
@@ -35,6 +34,7 @@ namespace PeopleAPI.Services
             foreach (var item in People)
             {
                 string imageUrl = "";
+                //Allows for multiple image extensions to be returned by ID.
                 if (File.Exists(@$"img/{item.Id}.webp"))
                 {
                     imageUrl = $"http://localhost:5000/PeopleImage/{item.Id}.webp";
@@ -56,6 +56,7 @@ namespace PeopleAPI.Services
             return People;
         }
 
+        //Return a list of all people stored in memory.
         public static List<Person> Get(string name)
         {
             var searchResults = new List<Person>{};
@@ -89,12 +90,14 @@ namespace PeopleAPI.Services
             } 
             return searchResults;
         }
+
+        //Adds the sent person to the People list.
         public static void Add(Person person)
         {
-            //person.Id = nextId++;
             People.Add(person);
         }
 
+        //Not yet implemented but it is intended to allow a user to delete a person from the front end.
         public static void Delete(string name)
         {
             var person = Get(name);
