@@ -36,7 +36,6 @@ dotnet run
 - Peter McClanahan and Robyn Cute for answering my questions!
 
 ## Known Issues
-- Unable to POST an image currently.
 
 ## Areas of Improvement
 - Utilizing SQL for a database of People
