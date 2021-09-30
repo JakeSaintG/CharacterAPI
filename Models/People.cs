@@ -6,6 +6,6 @@ namespace PeopleAPI.Models
     public class People
     {
         [JsonProperty(PropertyName = "person")]
-        public Person Person { get; set; }
+        public Person[] Person { get; set; }
     }
 }
