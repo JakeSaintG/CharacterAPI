@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeopleAPI", "PeopleAPI.csproj", "{99A96CD1-BF9B-4DDF-A1B4-8CC320217DDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CharacterAPI", "CharacterAPI.csproj", "{99A96CD1-BF9B-4DDF-A1B4-8CC320217DDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleAPITests", "..\PeopleAPITests\PeopleAPITests.csproj", "{6B7D00E3-16CD-4C00-8E6F-A25353FD497C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CharacterAPITests", "..\CharacterAPITests\CharacterAPITests.csproj", "{6B7D00E3-16CD-4C00-8E6F-A25353FD497C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

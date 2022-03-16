@@ -1,14 +1,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using PeopleAPI.Models;
-using PeopleAPI.Services;
+using CharacterAPI.Models;
+using CharacterAPI.Services;
 using System.Web;
 using System.IO;
 using System;
 using Microsoft.AspNetCore.Hosting;
 
-namespace PeopleAPI.Controllers
+namespace CharacterAPI.Controllers
 {
     /*Note:
     Images posted to the "img" folder stay there. They are assigned a 9 digit, randomized name/ID from the front end.
@@ -18,11 +18,11 @@ namespace PeopleAPI.Controllers
 
     [ApiController]
     [Route("[controller]")]
-    public class PeopleImageController : ControllerBase
+    public class CharacterImageController : ControllerBase
     {
         public static IWebHostEnvironment _webHostEnvironment;
 
-        public PeopleImageController(IWebHostEnvironment webHostEnvironment)
+        public CharacterImageController(IWebHostEnvironment webHostEnvironment)
         {
             _webHostEnvironment = webHostEnvironment;
         }

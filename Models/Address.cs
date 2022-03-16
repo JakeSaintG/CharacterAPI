@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace PeopleAPI.Models
+namespace CharacterAPI.Models
 {
     public class Address
     {

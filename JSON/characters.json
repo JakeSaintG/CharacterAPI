@@ -14,7 +14,7 @@
         "meditation",
         "music"
       ],
-      "image": "http://localhost:5000/PeopleImage/1.webp"
+      "image": "http://localhost:5000/CharacterImage/1.webp"
     },
     {
       "id": 2,
@@ -31,7 +31,7 @@
         "The Quarrymen",
         "painting"
       ],
-      "image": "http://localhost:5000/PeopleImage/2.png"
+      "image": "http://localhost:5000/CharacterImage/2.png"
     },
     {
       "id": 3,
@@ -48,7 +48,7 @@
         "meditation",
         "music"
       ],
-      "image": "http://localhost:5000/PeopleImage/3.jpg"
+      "image": "http://localhost:5000/CharacterImage/3.jpg"
     },
     {
       "id": 4,
@@ -65,7 +65,7 @@
         "Monty Python",
         "benefit concerts"
       ],
-      "image": "http://localhost:5000/PeopleImage/4.webp"
+      "image": "http://localhost:5000/CharacterImage/4.webp"
     },
     {
       "id": 5,
@@ -82,7 +82,7 @@
         "movie production",
         "writing"
       ],
-      "image": "http://localhost:5000/PeopleImage/5.webp"
+      "image": "http://localhost:5000/CharacterImage/5.webp"
     },
     {
       "id": 6,
@@ -99,7 +99,7 @@
         "revolution",
         "alerting the colonial militia"
       ],
-      "image": "http://localhost:5000/PeopleImage/6.webp"
+      "image": "http://localhost:5000/CharacterImage/6.webp"
     },
     {
       "id": 7,
@@ -116,7 +116,7 @@
         "football",
         "westerns"
       ],
-      "image": "http://localhost:5000/PeopleImage/7.webp"
+      "image": "http://localhost:5000/CharacterImage/7.webp"
     },
     {
       "id": 8,
@@ -133,7 +133,7 @@
         "tequila",
         "economic activism"
       ],
-      "image": "http://localhost:5000/PeopleImage/8.webp"
+      "image": "http://localhost:5000/CharacterImage/8.webp"
     },
     {
       "id": 9,
@@ -149,7 +149,7 @@
         "Mad Max",
         "The Sonny & Cher Show"
       ],
-      "image": "http://localhost:5000/PeopleImage/9.webp"
+      "image": "http://localhost:5000/CharacterImage/9.webp"
     },
     {
       "id": 10,
@@ -166,6 +166,6 @@
         "PETA",
         "the United States Armed Forces"
       ],
-      "image": "http://localhost:5000/PeopleImage/10.webp"
+      "image": "http://localhost:5000/CharacterImage/10.webp"
     }
   ]
