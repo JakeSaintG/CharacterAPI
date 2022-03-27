@@ -1,9 +1,9 @@
 using System;
 using Newtonsoft.Json;
 
-namespace PeopleAPI.Models
+namespace CharacterAPI.Models
 {
-    public class Person
+    public class Character
     {
         [JsonProperty(PropertyName = "id")]
         public int Id { get; set; }

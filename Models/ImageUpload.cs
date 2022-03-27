@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PeopleAPI.Models 
+namespace CharacterAPI.Models 
 {
     public class ImageUpload
     { 

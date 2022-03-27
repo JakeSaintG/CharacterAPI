@@ -1,21 +1,21 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using PeopleAPI.Models;
+using CharacterAPI.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
 
-namespace PeopleAPI.Services
+namespace CharacterAPI.Services
 {
     public static class JSONService
     {
-        public static List<Person> ReadFile()
+        public static List<Character> ReadFile()
         {
-            string fileName = "JSON/people.json";
+            string fileName = "JSON/characters.json";
             string jsonString = File.ReadAllText(fileName);
-            var peopleJSON = JsonConvert.DeserializeObject<List<Person>>(jsonString);
-            return peopleJSON;
+            var characterJSON = JsonConvert.DeserializeObject<List<Character>>(jsonString);
+            return characterJSON;
         }
     }
 }

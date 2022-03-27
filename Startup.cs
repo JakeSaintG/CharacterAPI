@@ -11,7 +11,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
-namespace PeopleAPI
+namespace CharacterAPI
 {
     public class Startup
     {
@@ -32,7 +32,7 @@ namespace PeopleAPI
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                     builder =>
                     {
-                        builder.WithOrigins("http://localhost:5000/people",
+                        builder.WithOrigins("http://localhost:5000/character",
                                             "http://localhost:4200")
                                             .AllowAnyHeader()
                                             .AllowAnyMethod();;
@@ -41,7 +41,7 @@ namespace PeopleAPI
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "PeopleAPI", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "CharacterAPI", Version = "v1" });
             });
         }
 
@@ -52,7 +52,7 @@ namespace PeopleAPI
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PeopleAPI v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CharacterAPI v1"));
             }
 
             app.UseRouting();
