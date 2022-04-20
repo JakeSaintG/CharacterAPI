@@ -8,14 +8,32 @@ using System.Text.Json;
 
 namespace CharacterAPI.Services
 {
-    public static class JSONService
+    public class JSONService
     {
+        static readonly string BaseFile = "JSON/CharactersBaseData.json";
+        static readonly string CharacterFile = "JSON/characters.json";
+        static List<Character> Characters;
+
+        public static void CharacterJsonCheck()
+        {
+            if (!File.Exists(CharacterFile)) 
+            {
+                File.Copy(BaseFile, CharacterFile);
+            }; 
+        }
+
         public static List<Character> ReadFile()
         {
-            string fileName = "JSON/characters.json";
-            string jsonString = File.ReadAllText(fileName);
+            string jsonString = File.ReadAllText(CharacterFile);
             var characterJSON = JsonConvert.DeserializeObject<List<Character>>(jsonString);
+            Characters = characterJSON;
             return characterJSON;
+        }
+
+        public static void WriteFile(Character character)
+        {
+            var updatedCharacters = JsonConvert.SerializeObject(Characters, Formatting.Indented);
+            File.WriteAllText(CharacterFile, updatedCharacters);
         }
     }
 }
