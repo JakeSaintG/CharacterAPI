@@ -32,7 +32,7 @@ namespace CharacterAPI.Controllers
         public ActionResult GetImage(string image)
         {
             string path = Directory.GetCurrentDirectory();
-            var imageFolder = Path.GetDirectoryName(@$"{path}/img/");
+            var imageFolder = Path.GetDirectoryName(@$"{path}/Images/CharacterImgs/");
             if (image == null)
             {
                 return NotFound();
@@ -49,7 +49,7 @@ namespace CharacterAPI.Controllers
         [HttpPost]
         public string Post([FromForm] ImageUpload objectImage)
         {
-            string path = @$"img/";
+            string path = @$"Images/CharacterImgs/";
             try
             {
                 if (objectImage.files.Length > 0)

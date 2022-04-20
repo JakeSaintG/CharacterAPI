@@ -44,16 +44,16 @@ namespace CharacterAPI.Controllers
         }
 
         //Not yet implemented but it is intended to allow a user to delete a character from the front end.
-        [HttpDelete("{id}")]
-        public IActionResult Delete(string name)
-        {
-            var character = CharacterService.Get(name);
-            if (character is null)
-            {
-                return NotFound();
-            }
-            CharacterService.Delete(name);
-            return NoContent();
-        }
+        //[HttpDelete("{id}")]
+        //public IActionResult Delete(string name)
+        //{
+        //    var character = CharacterService.Get(name);
+        //    if (character is null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    CharacterService.Delete(name);
+        //    return NoContent();
+        //}
     }
 }

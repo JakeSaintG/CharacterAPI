@@ -1,0 +1,171 @@
+[
+  {
+    "id": 1,
+    "name": "john lennon",
+    "birthDate": "1940-10-09T00:00:00",
+    "address": {
+      "street": "1697 Broadway",
+      "city": "New York",
+      "state": "New York",
+      "zip": 10019
+    },
+    "interests": [
+      "teachings of the Maharishi",
+      "meditation",
+      "music"
+    ],
+    "image": "http://localhost:5000/CharacterImage/1.webp"
+  },
+  {
+    "id": 2,
+    "name": "paul mccartney",
+    "birthDate": "1942-06-18T00:00:00",
+    "address": {
+      "street": "1697 Broadway",
+      "city": "New York",
+      "state": "New York",
+      "zip": 10019
+    },
+    "interests": [
+      "composition",
+      "The Quarrymen",
+      "painting"
+    ],
+    "image": "http://localhost:5000/CharacterImage/2.png"
+  },
+  {
+    "id": 3,
+    "name": "ringo starr",
+    "birthDate": "1940-07-07T00:00:00",
+    "address": {
+      "street": "1697 Broadway",
+      "city": "New York",
+      "state": "New York",
+      "zip": 10019
+    },
+    "interests": [
+      "yellow submarines",
+      "meditation",
+      "music"
+    ],
+    "image": "http://localhost:5000/CharacterImage/3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "george harrison",
+    "birthDate": "1943-02-25T00:00:00",
+    "address": {
+      "street": "1697 Broadway",
+      "city": "New York",
+      "state": "New York",
+      "zip": 10019
+    },
+    "interests": [
+      "hanging out with Bob Dylan",
+      "Monty Python",
+      "benefit concerts"
+    ],
+    "image": "http://localhost:5000/CharacterImage/4.webp"
+  },
+  {
+    "id": 5,
+    "name": "pete best",
+    "birthDate": "1941-11-24T00:00:00",
+    "address": {
+      "street": "1697 Broadway",
+      "city": "New York",
+      "state": "New York",
+      "zip": 10019
+    },
+    "interests": [
+      "The drums",
+      "movie production",
+      "writing"
+    ],
+    "image": "http://localhost:5000/CharacterImage/5.webp"
+  },
+  {
+    "id": 6,
+    "name": "paul revere",
+    "birthDate": "1735-01-01T00:00:00",
+    "address": {
+      "street": "19 N Square",
+      "city": "Boston",
+      "state": "massachusetts",
+      "zip": 2113
+    },
+    "interests": [
+      "silversmithing",
+      "revolution",
+      "alerting the colonial militia"
+    ],
+    "image": "http://localhost:5000/CharacterImage/6.webp"
+  },
+  {
+    "id": 7,
+    "name": "john wayne",
+    "birthDate": "1907-05-26T00:00:00",
+    "address": {
+      "street": "18601 Airport Way",
+      "city": "Santa Ana,",
+      "state": "California",
+      "zip": 92707
+    },
+    "interests": [
+      "Hollywood�s Golden Age",
+      "football",
+      "westerns"
+    ],
+    "image": "http://localhost:5000/CharacterImage/7.webp"
+  },
+  {
+    "id": 8,
+    "name": "george clooney",
+    "birthDate": "1961-05-06T00:00:00",
+    "address": {
+      "street": "10866 Wilshire Blvd. Suite 1100",
+      "city": "Los Angeles",
+      "state": "California",
+      "zip": 90024
+    },
+    "interests": [
+      "being batman",
+      "tequila",
+      "economic activism"
+    ],
+    "image": "http://localhost:5000/CharacterImage/8.webp"
+  },
+  {
+    "id": 9,
+    "name": "tina turner",
+    "birthDate": "1939-11-26T00:00:00",
+    "address": {
+      "street": "Hollywood Boulevard, Vine St",
+      "city": "Los Angeles",
+      "state": "California",
+      "zip": 90028
+    },
+    "interests": [
+      "Mad Max",
+      "The Sonny & Cher Show"
+    ],
+    "image": "http://localhost:5000/CharacterImage/9.webp"
+  },
+  {
+    "id": 10,
+    "name": "joan jett",
+    "birthDate": "1958-09-22T00:00:00",
+    "address": {
+      "street": "Hollywood Boulevard, Vine St",
+      "city": "Los Angeles",
+      "state": "California",
+      "zip": 90028
+    },
+    "interests": [
+      "WNBA",
+      "PETA",
+      "the United States Armed Forces"
+    ],
+    "image": "http://localhost:5000/CharacterImage/10.webp"
+  }
+]

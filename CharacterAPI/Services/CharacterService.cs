@@ -27,15 +27,15 @@ namespace CharacterAPI.Services
             {
                 string imageUrl = "";
                 //Allows for multiple image extensions to be returned by ID.
-                if (File.Exists(@$"img/{item.Id}.webp"))
+                if (File.Exists(@$"Images/CharacterImgs/{item.Id}.webp"))
                 {
                     imageUrl = $"http://localhost:5000/CharacterImage/{item.Id}.webp";
                 }
-                else if (File.Exists(@$"img/{item.Id}.jpg"))
+                else if (File.Exists(@$"Images/CharacterImgs/{item.Id}.jpg"))
                 {
                     imageUrl = $"http://localhost:5000/CharacterImage/{item.Id}.jpg";
                 }
-                else if (File.Exists(@$"img/{item.Id}.png"))
+                else if (File.Exists(@$"Images/CharacterImgs/{item.Id}.png"))
                 {
                     imageUrl = $"http://localhost:5000/CharacterImage/{item.Id}.png";
                 }
@@ -56,15 +56,15 @@ namespace CharacterAPI.Services
             {
                 item.BirthDate.ToShortDateString();
                 string imageUrl = "";
-                if (File.Exists(@$"img/{item.Id}.webp"))
+                if (File.Exists(@$"Images/CharacterImgs/{item.Id}.webp"))
                 {
                     imageUrl = $"http://localhost:5000/CharacterImage/{item.Id}.webp";
                 }
-                else if (File.Exists(@$"img/{item.Id}.png"))
+                else if (File.Exists(@$"Images/CharacterImgs/{item.Id}.png"))
                 {
                     imageUrl = $"http://localhost:5000/CharacterImage/{item.Id}.png";
                 }
-                else if (File.Exists(@$"img/{item.Id}.jpg"))
+                else if (File.Exists(@$"Images/CharacterImgs/{item.Id}.jpg"))
                 {
                     imageUrl = $"http://localhost:5000/CharacterImage/{item.Id}.jpg";
                 }
@@ -87,6 +87,7 @@ namespace CharacterAPI.Services
         public static void Add(Character character)
         {
             Characters.Add(character);
+            JSONService.WriteFile(character);
         }
 
         //Not yet implemented but it is intended to allow a user to delete a character from the front end.
